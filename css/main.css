@@ -1,0 +1,35 @@
+.main {
+  width: 100%;
+  height: 2000px;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+
+.side {
+  padding-top: 150px;
+  width: 7.5%;
+  background-color: #FF6F61;
+}
+
+.content {
+  padding-top: 150px;
+  width: 85%;
+
+}
+
+.content h2 {
+  text-align: center;
+  font-size: 72px;
+  color: #34568B;
+  padding-bottom: 50px;
+}
+
+.content p {
+  text-align: left;
+  font-size: 40px;
+  color: #34568B;
+  padding-right: 200px;
+  padding-left: 200px;
+  padding-bottom: 30px
+}

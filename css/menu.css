@@ -1,0 +1,97 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+
+#top-menu {
+  background-color transparent;
+  transition: background-color 0.5s;
+}
+
+#top-menu .menu-logo > img {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#scroll-menu {
+  background-color: white;
+  transition: background-color 0.5s;
+  z-index: 10;
+}
+
+
+#scroll-menu .menu-item > a {
+  color: black;
+  transition: color 0.5s;
+}
+
+#scroll-menu .menu-logo > img{
+  opacity 1;
+  transition: opacity 1.2s;
+}
+
+
+.menu-item {
+  height: 50px;
+  padding: 20px;
+  padding-top: 35px;
+}
+
+
+
+#last-logo{
+  margin-right: 20%;
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+}
+
+
+@keyframes line-animation {
+        0% {width: 0%;}
+        100% {width: 100%;}
+    }
+
+.menu-item:hover > .line {
+  background: red;
+  animation: line-animation 0.1s linear;*/
+  }
+
+.menu-item a {
+  margin: auto;
+}
+
+.menu-item a:link {
+  font-size: 25px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: rgb(0,0,0,1.0);
+  text-decoration: none;
+}
+
+.menu-item a:visited {
+  font-size: 25px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: rgb(0,0,0,1.0);
+  text-decoration: none;
+}
+
+
+@keyframes link-animation {
+        0% {color: black;}
+        100% {color: red;}
+    }
+
+.menu-item:hover > a {
+  animation: link-animation linear 0.2s;
+  animation-fill-mode: forwards;
+}

@@ -1,0 +1,59 @@
+.loader {
+  height:125vh;
+  width: 125vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.loader img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 17%;
+}
+
+#show-loader img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 17%;
+}
+
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+#quit-loader{
+  animation: loader 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes  flex{
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
+
+
+.flex-container {
+  animation: flex 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}

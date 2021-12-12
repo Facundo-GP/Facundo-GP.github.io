@@ -1,0 +1,25 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+body {
+  zoom: 80%;
+  background-image: linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url("../assets/images/background.jpg");
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+
+.header {
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+
+}
