@@ -69,8 +69,307 @@
 
         <div class="content">
           <h2>Resultados</h2>
-          <p>El problema es el de detectar, contar y localizar las frutas presentes en una imágen. </p>
-          <p>Realizar un diseño punta a punta que permita a partir de una foto de fruta (o varias frutas), identificar, hacer un conteo y localizar las mismas. Para esto nos basaremos en parte en el siguiente paper </p>
+          <p>Para la evaluación del desempeño de los detectores se utilizaron distintas        
+             métricas motivado por analizar los mismos desde distintos puntos de vista.
+          </p>
+          <p>Una de las métricas utilizadas fue el tercer momento del error, entendiéndose 
+             como error a la diferencia entre la cantidad de frutas de la imagen y la cantidad 
+             detectada. Esta métrica representa hacia que lado suele tender el error, es decir 
+             por si es por exceso, por defecto o ambos.
+          </p>
+          <p>Otra métrica utilizada es el MAPE (mean absolute percentage error) que como su nombre 
+             lo indica mide el porcentaje medio de error en el conteo de las frutas respecto a la 
+             cantidad verdadera.
+          </p>
+          <p>Por último se utiliza el porcentaje de acierto, entendiéndose el mismo como el porcentaje 
+             de veces en el que el conteo coincide con la cantidad real. Esta métrica también es la que 
+             se maximizo al optimizar los hiperparámetros de los detectores.
+          </p>
+
+          <div class="wrapper">
+  
+            
+              <div class="table">
+                
+                <div class="row header blue">
+                  <div class="cell">
+                    Fruta
+                  </div>
+                  <div class="cell">
+                    Skewness
+                  </div>
+                  <div class="cell">
+                    MAPE(%)
+                  </div>
+                  <div class="cell">
+                    Porcentaje de acierto
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Manzana
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    1.22
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    12.24
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    79.37
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Naranja
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    7.75
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    1.59
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    98.41
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Kiwi
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    6.35
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    1.22
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    96.83
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Banana
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    1.67
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    15.5
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    73.02
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Mango
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    1.69
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    1.9
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    92.06
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Ciruelas
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    1.44
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    3.12
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    82.54
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Global
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    ...
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    5.93
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    87.04
+                  </div>
+                </div>
+        
+                
+              </div>
+  
+        </div>
+
+        <p>Como otra forma de entender el desempeño de los detectores de una manera mas 
+           visual graficámos la cantidad detectada y la real en función de las imágenes, 
+           algunos ejemplos pueden verse a continuación:
+        <p/>
+
+        <img src="assets/images/resultados/detector_mangos.png" class="content-image">
+
+        <img src="assets/images/resultados/detector_ciruelas.png" class="content-image">
+        
+        <img src="assets/images/resultados/detector_manzanas.png" class="content-image">
+
+
+        <p>Finalmente se validó el funcionamiento de los detectores probandolos en 
+           imágenes que no fueron utilizadas para ajustar los hiperparámetros.
+        </p>
+
+          <div class="wrapper">
+  
+            
+              <div class="table">
+                
+                <div class="row header blue">
+                  <div class="cell">
+                    Fruta
+                  </div>
+                  <div class="cell">
+                    Skewness
+                  </div>
+                  <div class="cell">
+                    MAPE(%)
+                  </div>
+                  <div class="cell">
+                    Porcentaje de acierto
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Manzana
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    1.22
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    12.24
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    79.37
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Naranja
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    7.75
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    1.59
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    98.41
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Kiwi
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    6.35
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    1.22
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    96.83
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Banana
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    1.67
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    15.5
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    73.02
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Mango
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    1.69
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    1.9
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    92.06
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Ciruelas
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    1.44
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    3.12
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    82.54
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="cell" data-title="Fruta">
+                    Global
+                  </div>
+                  <div class="cell" data-title="Skewness">
+                    ...
+                  </div>
+                  <div class="cell" data-title="MAPE(%)">
+                    5.93
+                  </div>
+                  <div class="cell" data-title="Porcentaje de acierto">
+                    87.04
+                  </div>
+                </div>
+        
+                
+              </div>
+  
+        </div>
+
+
+        <p>Los resultados no variaron significativamente de los obtenidos con la base para el ajuste 
+           por lo que los detectores parecen ser robustos.
+            
+        </p>
+
         </div>
 
         <div class="side">
