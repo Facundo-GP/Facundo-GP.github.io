@@ -8,16 +8,19 @@ loader.id = 'show-loader';
 
 //Animacion menu
 var cont = 0;
+var flag = 0;
 window.addEventListener("scroll", function(event) {
     var top = this.scrollY,
         left =this.scrollX;
-        if (top > 50){
+        if (top > 50 && flag == 0){
           var elem = document.getElementById('top-menu');
           elem.id = 'scroll-menu';
+          flag=1;
         }
-        else {
+        else if (top <= 50 && flag == 1){
           var elem = document.getElementById('scroll-menu');
           elem.id = 'top-menu';
+          flag=0;
 
 
         }

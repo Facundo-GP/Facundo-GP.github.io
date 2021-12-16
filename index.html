@@ -6,11 +6,7 @@
     <title>FruitDetector</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/title.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/loader.css">
+
 
   </head>
   <body>
@@ -38,6 +34,10 @@
           </div>
           <div class="menu-item">
             <a href="metodologia.html" >Metodología</a>
+            <div class="line"></div>
+          </div>
+          <div class="menu-item">
+            <a href="detector.html" >Detector</a>
             <div class="line"></div>
           </div>
           <div class="menu-item">
@@ -103,7 +103,7 @@
                 con el dataset) pero no según cantidad de frutas o su posición.
             </li>
           </ul>
-          <div style="display:flex; flex-direction:column; padding-top:2%;">
+          <div style="display:flex; flex-direction:column; padding-top:4%;">
               <div style="display:flex; flex-direction:row">
                  <img src="assets/images/intro/ejemplo_ds_1.png" style="margin-left: auto;margin-right: 5%; transform: scale(1.3); width:20%; height:auto;">
                  <img src="assets/images/intro/ejemplo_ds_2.png" style="margin-left: 5%;margin-right: auto; transform: scale(1.3);  width:20%; height:auto;">
@@ -130,14 +130,36 @@
                 Hay situaciones en que hay mucha oclusión entre frutas, haciendo que sea bastante difícil identificarlas por separado.
             </li>
           </ul>
-          <div style="display:flex; flex-direction:column; padding-top:2%;">
+          <div style="display:flex; flex-direction:column; padding-top:4%;">
               <div style="display:flex; flex-direction:row">
                  <img src="assets/images/intro/problemas.png" style="margin-left: auto;margin-right: auto; transform: scale(1.5);  width:20%; height:auto;">
               </div>
               <p class="desc">Ejemplo de problemas</p>
           </div>
 
+          <p>
+            Para abordar el problema con el tiempo disponible y con las herramientas del curso se decidieron
+            tener las siguientes consideraciones:
+          </p><br>
 
+          <ul>
+            <li>
+                No vamos a trabajar con con los 16 tipos de frutas, sólo con 6 de ellas, seleccionadas de modo
+                que el problema mantuviera parte de la complejidad original pero sin excederse. Por esta misma
+                razón se seleccionaron frutas que fueran bastante distintas entre ellas en pos de mantener la
+                diversidad del problema original.
+            </li>
+            <li>
+                Tampoco se va a usar todo el dataset de cada fruta, puesto que sería inviable etiquetar todas las
+                imágenes, por lo que se decidió crear un subset para cada una de las frutas seleccionadas, de unos
+                60 elementos por fruta, etiquetadas por cantidad manualmente.
+            </li>
+            <li>
+                No se van a etiquetar posiciones, debido a la dificultad de lo mismo. Por lo tanto esta característica
+                se juzgará cualitativamente al ver los resultados.
+            </li>
+          </ul>
+          <br><br><br><br><br><br>
 
 
         </div>
