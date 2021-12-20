@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FruitDetector</title>
+    <link rel="icon" href="https://cdn-icons.flaticon.com/png/512/3194/premium/3194591.png?token=exp=1639967747~hmac=90741de645baed71513bb653dd6f4e10"
+      type = "image/x-icon">
 
     <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
+
     <div class="loader"><img src="assets/images/loader.gif" alt=""> </div>
     <div class="flex-container">
 
@@ -68,22 +71,94 @@
 
         <div class="content">
           <h2>Resultados</h2>
-          <p>Para la evaluación del desempeño de los detectores se utilizaron distintas
-             métricas motivado por analizar los mismos desde distintos puntos de vista.
-          </p><br>
-          <p>Una de las métricas utilizadas fue el tercer momento del error, entendiéndose
-             como error a la diferencia entre la cantidad de frutas de la imagen y la cantidad
-             detectada. Esta métrica representa hacia que lado suele tender el error, es decir
-             por si es por exceso, por defecto o ambos.
-          </p><br>
-          <p>Otra métrica utilizada es el MAPE (mean absolute percentage error) que como su nombre
-             lo indica mide el porcentaje medio de error en el conteo de las frutas respecto a la
-             cantidad verdadera.
-          </p><br>
-          <p>Por último se utiliza el porcentaje de acierto, entendiéndose el mismo como el porcentaje
-             de veces en el que el conteo coincide con la cantidad real. Esta métrica también es la que
-             se maximizo al optimizar los hiperparámetros de los detectores.
+
+
+          <h3>Clasificador</h3>
+
+          <p>
+              Con respecto a los clasificadores se evaluo su desempeño con las matrices de confusion y el porcentaje
+              de acierto, se debe tener en cuenta que ambos modelos (Random Forest y red convolucional) fueron entrenados
+              con los datos del <a href="https://www.kaggle.com/chrisfilo/fruit-recognition" target="_blank"
+              style="font-weight:bold;text-decoration: inherit;color: #34568B;font-style:italic">dataset de Kaggle</a> menos
+              el subconjunto de datos seleccionado para optimizar el detector, dicho subconjunto se utilizo para evaluar el
+              desempeño de los clasificadores.
+
+              Las matrices de confusion se muestran a continuacion:
+
           </p>
+
+
+          <div style="display:flex; flex-direction:column; margin-top:10%;">
+              <div style="display:flex; flex-direction:row">
+                 <img src="assets/images/resultados/matriz_confusion_red.png" style="margin-left: auto;margin-right: 6%; transform: scale(1.5);  width:25%; height:auto;">
+                 <img src="assets/images/resultados/matriz_confusion_rf.jpeg" style="margin-left: 6%;margin-right: auto; transform: scale(1.5);  width:25%; height:auto;">
+
+              </div>
+            <p class="desc" style="padding-bottom:5%;margin-top:2%;">Matrices de confusion de red convolucional y Random Forest respecticamente <br>
+                                                      Manzana-0, Banana-1, Kiwi-2, Mango-3, Naranja-4, Ciruela-5</p>
+          </div>
+
+          <p>Como se observa en las matrices, el modelo de la red convolucional es muy superior al Random Forest en los datos
+          del subconjunto.</p>
+
+
+
+          <h3>Detector</h3>
+
+
+          <p>
+              Para la evaluación del desempeño de los detectores se utilizaron distintas
+              métricas motivado por analizar los mismos desde distintos puntos de vista.
+          </p><br>
+
+          <p>
+             Se utilizó un conjunto de train de  378 imágenes (63 por fruta) y uno de test
+            de 60 imágenes (10 por fruta) para la evaluación.
+
+          </p><br>
+
+          <p>
+              Una de las métricas utilizadas fue el tercer momento del error, entendiéndose
+              como error a la diferencia entre la cantidad de frutas de la imagen y la cantidad
+              detectada. Esta métrica representa hacia que lado suele tender el error, es decir
+              por si es por exceso, por defecto o ambos.
+          </p><br>
+
+          <div style="display:flex; flex-direction:column; padding-top:4%;">
+              <div style="display:flex; flex-direction:row">
+                 <img src="assets/images/resultados/skew.png" style="margin-left: auto;margin-right: auto; transform: scale(1.5);  width:25%; height:auto;">
+              </div>
+            <p class="desc" style="padding-bottom:5%;">Estimador del tercer momento para muestra de tamaño n</p>
+          </div>
+
+          <p>
+              Otra métrica utilizada es el MAPE (mean absolute percentage error) que como su nombre
+              lo indica mide el porcentaje medio de error en el conteo de las frutas respecto a la
+              cantidad verdadera.
+          </p><br>
+
+          <div style="display:flex; flex-direction:column; padding-top:4%;">
+              <div style="display:flex; flex-direction:row">
+                 <img src="assets/images/resultados/mape.png" style="margin-left: auto;margin-right: auto; transform: scale(1.5);  width:21%; height:auto;">
+              </div>
+            <p class="desc" style="padding-bottom:5%;">MAPE para muestra de tamaño n donde A es la cantidad de frutas de la imagen y
+                              la cantidad de frutas detectadas</p>
+          </div>
+
+          <p>
+              Por último se utiliza el porcentaje de acierto, entendiéndose el mismo como el porcentaje
+              de veces en el que el conteo coincide con la cantidad real. Esta métrica también es la que
+              se maximizo al optimizar los hiperparámetros de los detectores.
+          </p>
+
+          <div style="display:flex; flex-direction:column; padding-top:4%;">
+              <div style="display:flex; flex-direction:row">
+                 <img src="assets/images/resultados/p_acierto.png" style="margin-left: auto;margin-right: auto; transform: scale(1.5);  width:25%; height:auto;">
+              </div>
+              <p class="desc" style="padding-bottom:1.5%;">Porcentaje de acierto para muestra de tamaño n donde A es
+                                                          1 si se cuenta la cantidad de frutas correcta y 0 si no</p>
+          </div>
+
 
           <div class="wrapper">
 
@@ -245,7 +320,7 @@
 
 
         <p>Finalmente se validó el funcionamiento de los detectores probandolos en
-           imágenes que no fueron utilizadas para ajustar los hiperparámetros.
+           imágenes del conjunto de test.
         </p>
 
           <div class="wrapper">
@@ -411,7 +486,7 @@
 
       <div class="footer">
 
-        <a href="https://github.com/Facundo-GP/FruitDetector">Código completo del proyecto</a>
+        <a href="https://github.com/Facundo-GP/FruitDetector"  target="_blank">Código completo del proyecto</a>
 
         <div class="footer-title">
           <h1>Integrantes</h1>

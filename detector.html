@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FruitDetector</title>
+    <link rel="icon" href="https://cdn-icons.flaticon.com/png/512/3194/premium/3194591.png?token=exp=1639967747~hmac=90741de645baed71513bb653dd6f4e10"
+      type = "image/x-icon">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -107,7 +109,26 @@
                 bananas y mangos correspondientemente) y se aplica luego un CLOSE para suavizar las componentes.<br><br> Sobre esta imágen binaria se obtienen los contornos, y para suavizar los mismos se aplican distintos procedimientos según la fruta. Para los mangos se aplica un Convex Hull, y para las bananas un Approx Poly (se evita la Convex Hull pues al ser las bananas formas alargadas, ciertas configuraciones de bananas pegadas pueden generar una Convex Hull que incluya mucho fondo en comparación a la fruta).<br><br>
                 Teniendo los contornos, se decide si el contorno delimita a una o más frutas (y cuantas) en función del área encerrada (por si hay dos frutas pegadas y el contorno detectado es el de ambas juntas). Entonces se obtiene la cantidad de frutas en la imágen y los contornos que delimitan a las mismas.
             </li>
+
+            <div style="display:flex; flex-direction:column; margin-top:10%;">
+                <div style="display:flex; flex-direction:row; margin-bottom:10%;">
+                   <img src="assets/images/detector/proceso_banana_1.png" style="margin-left: auto;margin-right: 3%; transform: scale(1.3); width: 22%; height:auto;">
+                   <img src="assets/images/detector/proceso_banana_2.png" style="margin-left: 3%;margin-right: 3%; transform: scale(1.3); width: 22%; height:auto;">
+                   <img src="assets/images/detector/proceso_banana_3.png" style="margin-left: 3%;margin-right: 3%; transform: scale(1.3); width: 22%; height:auto;">
+                   <img src="assets/images/detector/proceso_banana_4.png" style="margin-left: 3%;margin-right: 3%; transform: scale(1.3); width: 22%; height:auto;">
+                </div>
+                <div style="display:flex; flex-direction:row">
+                   <img src="assets/images/detector/proceso_banana_5.png" style="margin-left: auto;margin-right: 3%; transform: scale(1.3); width: 22%; height:auto;">
+                   <img src="assets/images/detector/proceso_banana_6.png" style="margin-left: 3%;margin-right: 3%; transform: scale(1.3); width: 22%; height:auto;">
+                   <img src="assets/images/detector/proceso_banana_7.png" style="margin-left: 3%;margin-right: auto; transform: scale(1.3); width: 22%; height:auto;">
+                </div>
+                  <p class="desc" style="margin-top: 1%;padding-bottom:6%;">Cadena de procesamiento para detector de bananas</p>
+
+            </div>
+
           </ul>
+
+
 
           <p>
               En todo este proceso de detección hay parámetros que debieron ser seteados para optimizar el funcionamiento,
@@ -133,7 +154,7 @@
 
       <div class="footer">
 
-        <a href="https://github.com/Facundo-GP/FruitDetector">Código completo del proyecto</a>
+        <a href="https://github.com/Facundo-GP/FruitDetector"  target="_blank">Código completo del proyecto</a>
 
         <div class="footer-title">
           <h1>Integrantes</h1>
