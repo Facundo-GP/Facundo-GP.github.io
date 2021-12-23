@@ -1,0 +1,177 @@
+
+#inputs {
+  display: flex;
+  width: 33%;
+  text-align: center;
+}
+
+#full {
+  background-color: #1C1B1E;
+  width: 100%;
+}
+
+#titulo {
+  text-align: center;
+  font-size:xx-large;
+  color: darkgrey;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-style: italic;
+}
+
+#titulo_verde {
+  text-align: center;
+  font-size:xx-large;
+  color: darkgrey;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-style: italic;
+}
+
+
+#titulo_azul {
+  text-align: center;
+  font-size:xx-large;
+  color: darkgrey;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-style: italic;
+}
+
+
+#titulo_verde::first-letter{
+  color:#619E61;
+}
+
+#titulo_azul::first-letter{
+  color:#5877a0;
+}
+
+
+#div_titulo{
+  display: flex;
+  justify-items: center;
+}
+
+
+.texto {
+  color : #619E61;
+}
+
+.divisiones{
+  margin-left: 10%;
+  margin-top:0px;
+  margin-right: 10%;
+  margin-bottom: 0px;
+  
+}
+
+.ingresar {
+  border-color: darkgrey;
+  background-color : transparent;
+  color : whitesmoke;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+
+}
+
+.boton_verde {
+  border-color: darkgrey;
+  background-color : transparent;
+  color : whitesmoke;
+  padding: 10px 50px;
+  display: inline-block;
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+
+}
+
+.boton_verde:hover {
+  background-color: #619E61;
+}
+
+.boton_azul {
+  border-color: darkgrey;
+  background-color : transparent;
+  color : whitesmoke;
+  padding: 10px 50px;
+  display: inline-block;
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+
+}
+
+.boton_azul:hover {
+  background-color: #5877a0;
+}
+
+
+
+.boton_reset {
+  border-color: darkgrey;
+  background-color : transparent;
+  color : whitesmoke;
+  padding: 10px 50px;
+  display: inline-block;
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+
+}
+
+.boton_reset:hover {
+  background-color: #83619e;
+}
+
+
+
+.container {
+    padding-top: 10px;
+    width: 1350px;
+    height: 500px;
+    position: relative;
+    background: #1C1B1E;
+  }
+
+
+.nodo {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    background: #619E61 !important;
+    font-size: 20px !important;
+    z-index:3;
+  }
+
+  .nodo_L {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    background: #5877a0 !important;
+    font-size: 20px !important;
+    z-index:3;
+  }
+
+.punto {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    z-index:1;
+    position: absolute;
+    background: rgb(169, 169, 169);
+  }
+
+  .lista {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 1350px;
+    height: 70px;
+    position: relative;
+    background: #1C1B1E;
+  }
