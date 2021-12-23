@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"> 
+    <script type="text/javascript" src="script.js"></script>
+</head>
+  <body id = "full">
+
+
+    <div id = "div_titulo">
+    <h1 id ="titulo_verde" style = "padding-left: 300px;">Binary</h1>
+    <h1 id ="titulo_verde" >Search </h1>
+    <h1 id ="titulo_verde"> Tree </h1>
+    <h1 id ="titulo">&</h1>
+    <h1 id ="titulo_azul">Linked </h1>
+    <h1 id ="titulo_azul">List </h1>
+    <h1 id ="titulo">insertion </h1>
+    <h1 id ="titulo">visualization</h1>
+    </div>
+
+    
+    <hr style = "border-radius: 10px; border-color: #619E61; margin-bottom:15px">
+    
+
+    <div id="inputs">
+
+      <div class = "divisiones" style="display: flex;">
+        <input id ="numero" class = "ingresar" type="text" placeholder="Add BST a node:"> 
+        <button style="flex-direction: column;"class="boton_verde" id="boton_insertar"  onclick="insertarABB()">Insert Node</button> 
+      </div>
+      
+      <div class = "divisiones" style="display: flex;">
+        <input id ="numero_lista" class = "ingresar" type="text" placeholder="Add a list node:"> 
+        <button style="flex-direction: column;"class="boton_azul" id="boton_insertar" onclick="insertarLista()">Insert Node</button> 
+      </div>
+      
+      <div class = "divisiones">
+        <button id="boton_insertar" class = "boton_reset" onclick="borrarTodo()">Reset</button>
+      </div>
+
+
+  
+     
+    </div>
+     
+
+
+     <div class = "lista"> </div>
+  
+    
+    <div class ="container"> </div>
+   
+
+
+  </body>  
+</html>
